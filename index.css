@@ -1,0 +1,22 @@
+body
+{
+    background-color:lightblue;
+    background-image:url(b2.jpg);
+    background-size: 100%;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+}
+button
+{
+background-color:orange;
+padding: 30px 30px;
+text-align:center;
+font-size:50;
+color:white;
+}
+div{
+    text-align: center;
+}
+h1{
+    font-size:50;
+}
