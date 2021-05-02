@@ -23,14 +23,14 @@
 			}
 			$query = "SELECT * FROM Posts;";
 			echo "<table>";
-			echo "<tr><th>Post</th><th>Author ID</th><th>Delete?</th><tr>";
+			echo "<tr><th>Author ID</th><th>Content</th><th>Post ID</th><th>Delete?</th><tr>";
 			if ($result = $mysqli->query($query)) {
 				while ($row = $result->fetch_assoc())
 				{
 					$authorid = $row["author_id"];
 					$postid = $row["post_id"];
 					$content = $row["content"];
-					echo "<tr><td >$authorid</td><td>$content</td><td><input type='checkbox' name='postid[]' value=" . $row["post_id"] . "></td></tr>";
+					echo "<tr><td >$authorid</td><td>$content</td><td>$postid<td><input type='checkbox' name='postid[]' value=" . $row["post_id"] . "></td></tr>";
 				}
 					echo "</table>";
 					$result->free();
