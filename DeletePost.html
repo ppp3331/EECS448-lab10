@@ -27,8 +27,10 @@
 			if ($result = $mysqli->query($query)) {
 				while ($row = $result->fetch_assoc())
 				{
-					echo "<tr><td>" .$row["content"]."</td><td>".$row["author_id"] . "</td>";
-					echo "<td><input name='post_id[]' type='checkbox' value='" . $row["post_id"] . "'> . "</td></tr>";
+					$authorid = $row["author_id"];
+					$postid = $row["post_id"];
+					$content = $row["content"];
+					echo "<tr><td >$authorid</td><td>$content</td><td><input type='checkbox' name='postid[]' value=" . $row["post_id"] . "></td></tr>";
 				}
 					echo "</table>";
 					$result->free();
